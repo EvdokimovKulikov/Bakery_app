@@ -58,7 +58,9 @@ namespace Bakery_app
             }
             if (PasswordBox.Text == user.Password)
             {
-               MessageBox.Show("Вход успешно выполнен!", "Вход", MessageBoxButton.OK, MessageBoxImage.Information);
+               ProductList productList = new ProductList(); 
+                productList.Show();
+                this.Close();
 
             }
         }

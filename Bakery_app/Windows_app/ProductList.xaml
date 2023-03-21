@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bakery_app.Windows_app"
         mc:Ignorable="d"
-        Title="ProductList" Height="450" Width="800">
+        Title="ProductList" Height="1100" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/3.png"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="15*"/>
@@ -19,11 +22,7 @@
         </Grid.RowDefinitions>
 
 
-        <Border Grid.Row="1" Grid.Column="1"  CornerRadius="40" BorderBrush="#FFFF8000" BorderThickness="2" >
-
-
-
-        </Border>
+        <Border Grid.Row="1" Grid.Column="1"  CornerRadius="40" Background="#6fffffff" BorderBrush="#FFFF8000" BorderThickness="2" />
 
     </Grid>
 </Window>
