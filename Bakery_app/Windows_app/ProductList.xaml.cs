@@ -17,9 +17,7 @@ using static Bakery_app.ClassHelper.EFClass;
 
 namespace Bakery_app.Windows_app
 {
-    /// <summary>
-    /// Логика взаимодействия для ProductList.xaml
-    /// </summary>
+    
     public partial class ProductList : Window
     {
         private void GetListProduct()

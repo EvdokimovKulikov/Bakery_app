@@ -19,9 +19,7 @@ using static Bakery_app.ClassHelper.EFClass;
 
 namespace Bakery_app.Windows_app
 {
-    /// <summary>
-    /// Логика взаимодействия для EditProductList.xaml
-    /// </summary>
+    
     public partial class EditProductList : Window
     {
         private string pathPhoto = null;
@@ -82,12 +80,12 @@ namespace Bakery_app.Windows_app
 
             private void BtnAddEdit_Click(object sender, RoutedEventArgs e)
             {
-                // валидация
+                
 
 
                 if (isEdit)
                 {
-                    //изменение товара
+                    
 
                     editProduct.ProdName = TbNameProduct.Text;
                     editProduct.Description = TbDisc.Text;
@@ -101,7 +99,7 @@ namespace Bakery_app.Windows_app
                 }
                 else
                 {
-                    //добавление товара
+                    
                     Product product = new Product();
                     product.ProdName = TbNameProduct.Text;
                     product.Description = TbDisc.Text;
