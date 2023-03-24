@@ -119,12 +119,19 @@
     <Compile Include="DB\UserAccount.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows_app\EditProductList.xaml.cs">
+      <DependentUpon>EditProductList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows_app\ProductList.xaml.cs">
       <DependentUpon>ProductList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows_app\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows_app\EditProductList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows_app\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,6 +201,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="img\4.png" />
     <Resource Include="img\3.png" />
     <Resource Include="img\2.png" />
     <Resource Include="img\1.png" />
