@@ -55,7 +55,7 @@ namespace Bakery_app.Windows_app
             CMBTypeProduct.SelectedIndex = 0;
             CMBTypeProduct.DisplayMemberPath = "TypeName";
 
-            TbNameProduct.Text = product.ProdName.ToString();
+            TbNameProduct.Text = product.ProdName;
             TbDisc.Text = product.Description.ToString();
             CMBTypeProduct.SelectedItem = ContextDB.ProductType.Where(i => i.IdProdType == product.IdProdType).FirstOrDefault();
 

@@ -29,30 +29,77 @@ namespace Bakery_app.Windows_app
             products = products.Where(i => i.ProdName.ToLower().Contains(TbSearch.Text.ToLower())).ToList();
             // поиск, сортировка, фильтрация
 
+            var selectedIndexCmb = CmbSort.SelectedIndex;
+
+            switch (selectedIndexCmb)
+            {
+                case 0:
+                    products = products.OrderBy(i => i.IdProd).ToList();
+                    break;
+
+                case 1:
+                    products = products.OrderBy(i => i.ProdName.ToLower()).ToList();
+                    break;
+
+                case 2:
+                    products = products.OrderByDescending(i => i.ProdName.ToLower()).ToList();
+                    break;
+
+                default:
+                    break;
+            }
+
+
             LvProduct.ItemsSource = products;
         }
         public ProductList()
         {
             InitializeComponent();
+            GetListProduct();
+            //LvCartProduct.ItemsSource = observableCollectionProduct;
         }
 
         private void BtnEditProduct_Click(object sender, RoutedEventArgs e)
         {
-            EditProductList editProductList = new EditProductList();
-            editProductList.Show(); 
-            
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            var product = button.DataContext as Product;
+
+            EditProductList editProductWindow = new EditProductList(product);
+            editProductWindow.ShowDialog();
+
+            GetListProduct();
+
         }
 
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
             EditProductList editProductList = new EditProductList();
             editProductList.ShowDialog();
+            GetListProduct();
 
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             GetListProduct();
+
         }
+
+        private void LvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GetListProduct();
+        }
+
+       
     }
 }

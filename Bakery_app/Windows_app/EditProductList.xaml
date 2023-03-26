@@ -8,6 +8,9 @@
         Title="EditProductList" Height="800" 
         Width="500">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/editproduct.png" Stretch="UniformToFill" Opacity="0.6"/>
+        </Grid.Background>
         <StackPanel Orientation="Vertical" 
                     Margin="40 0 40 0 " >
 

@@ -49,16 +49,36 @@ namespace Bakery_app
 
             var accounts = ContextDB.UserAccount.ToList();
             var user = accounts.FirstOrDefault(i => (i.LoginName == login));
+            
             if (user == null)
             {
                 MessageBox.Show("Такого пользователя с логином не существует!");
                 return;
             }
+
+            var role = ContextDB.Role.Find(user.IdRole);
+
+            if( role.RoleName == "Admin")
+            {
+
+                            ProductList productList = new ProductList();
+                            productList.Show();
+                            this.Close();
+
+                        }
+             if( role.RoleName == "Client")
+             {
+
+                ProductListClient productListClient = new ProductListClient();  
+                productListClient.Show();
+                this.Close();
+
+             }
+
+
             if (PasswordBox.Text == user.Password)
             {
-               ProductList productList = new ProductList(); 
-                productList.Show();
-                this.Close();
+               
 
             }
         }

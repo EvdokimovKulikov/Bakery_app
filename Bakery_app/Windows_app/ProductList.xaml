@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bakery_app.Windows_app"
         mc:Ignorable="d"
-        Title="ProductList" Height="1100" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="ProductList" Height="1000" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid >
         <Grid.Background>
             <ImageBrush ImageSource="/img/3.png"/>
@@ -34,14 +34,22 @@
                      Width="200"
                      VerticalContentAlignment="Center"  
                      TextChanged="TbSearch_TextChanged"/>
+            <TextBlock Text="Сортировка:"
+                       FontSize="18"
+                       Margin="25,0,10,0"/>
+
+            <ComboBox x:Name="CmbSort"
+                      FontSize="18"
+                      Width="200" SelectionChanged="CmbSort_SelectionChanged" Margin="15,0,0,0"
+                      />
 
         </WrapPanel>
 
         <ListView Grid.Row="2"
                   x:Name="LvProduct"
                   Margin="5" 
-                  d:ItemsSource="{d:SampleData ItemCount=8}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#4fffffff">
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#4fffffff" SelectionChanged="LvProduct_SelectionChanged">
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -70,22 +78,28 @@
 
                             </Image>
 
-                            <TextBlock Text="{Binding ProductName}" 
+                            <TextBlock Text="{Binding ProdName}" 
+                                       FontSize="14"
+                                       Margin="10,25,0,0" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Description}" 
                                        FontSize="14"
                                        Margin="10,25,0,0" HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding ProductType.TypeName}" 
                                        FontSize="14"
                                        Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <WrapPanel>
 
                             <Button x:Name="BtnEditProduct" 
                                     Height="30"
                                     Width="50"
-                                    Margin="10,30,10,10"
+                                    Margin="10,10,10,10"
                                     Click="BtnEditProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/img/4.png"/>
                                 </Button.Background>
                             </Button>
+                            </WrapPanel>
+                            
                         </StackPanel>
                     </Border>
 
