@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\CartProduct.cs" />
     <Compile Include="ClassHelper\EFClass.cs" />
     <Compile Include="DB\Client.cs">
       <DependentUpon>Model.tt</DependentUpon>

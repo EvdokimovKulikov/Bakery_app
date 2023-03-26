@@ -38,6 +38,14 @@ namespace Bakery_app.Windows_app
         private void BtnDeleteProduct_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+
+        }
+
+        private void LvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

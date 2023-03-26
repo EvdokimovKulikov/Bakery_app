@@ -126,8 +126,14 @@ namespace Bakery_app.Windows_app
         {
             BasketList basketList = new BasketList();
             basketList.Show();
+            this.Close();
 
             
+        }
+
+        private void BtnBasketProduct_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
