@@ -28,24 +28,25 @@ namespace Bakery_app.Windows_app
         {
             ProductListClient productListClient = new ProductListClient();
             productListClient.Show();
+            this.Close();
         }
 
         private void BtnBuyProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("В разработке");
         }
 
         private void BtnDeleteProduct_Click(object sender, RoutedEventArgs e)
         {
 
-
+            MessageBox.Show("В разработке");
 
 
         }
 
         private void LvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            MessageBox.Show("В разработке");
         }
     }
 }

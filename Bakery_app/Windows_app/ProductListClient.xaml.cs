@@ -57,7 +57,7 @@ namespace Bakery_app.Windows_app
         {
             InitializeComponent();
             GetListProduct();
-            //LvCartProduct.ItemsSource = observableCollectionProduct;
+            
         }
 
         private void BtnEditProduct_Click(object sender, RoutedEventArgs e)
@@ -101,26 +101,7 @@ namespace Bakery_app.Windows_app
             GetListProduct();
         }
 
-        private void BtnDeletProduct_Click(object sender, RoutedEventArgs e)
-        {
-            //    var button = sender as Button;
-            //    if (button == null)
-            //    {
-            //        return;
-            //    }
-
-            //    var product = button.DataContext as Product;
-
-            //    if (product != null)
-            //    {
-            //        observableCollectionProduct.Remove(product);
-
-            //        LvCartProduct.ItemsSource = observableCollectionProduct;
-
-            //        MessageBox.Show(product.ProdName + " Delete");
-            //    }
-            MessageBox.Show("В разработке");
-        }
+        
 
         private void BtnBasket_Click(object sender, RoutedEventArgs e)
         {
@@ -133,7 +114,7 @@ namespace Bakery_app.Windows_app
 
         private void BtnBasketProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("В разработке");
         }
     }
 }
