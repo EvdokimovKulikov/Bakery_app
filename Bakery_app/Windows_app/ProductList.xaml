@@ -21,6 +21,15 @@
                        FontSize="25" 
                        TextAlignment="Center" 
                        Foreground="Black"/>
+        <Button x:Name="BtnExitProduct" 
+                                    Height="30"
+                                    Width="30"
+                                    Margin="10,10,10,10"
+                                    Click="BtnExitProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/strelocka.png"/>
+            </Button.Background>
+        </Button>
 
         <WrapPanel Grid.Row="1" 
                    VerticalAlignment="Center">

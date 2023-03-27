@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bakery_app.Windows_app"
         mc:Ignorable="d"
-        Title="ProductListClient" Height="1000" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="ProductListClient" Height="1300" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid >
         <Grid.Background>
             <ImageBrush ImageSource="/img/3.png"/>
@@ -21,7 +21,18 @@
                        FontSize="25" 
                        TextAlignment="Center" 
                        Foreground="Black"/>
-        
+
+        <Button x:Name="BtnExitProduct" 
+                                    Height="30"
+                                    Width="30"
+                                    Margin="10,10,10,10"
+                                    Click="BtnExitProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/strelocka.png"/>
+            </Button.Background>
+        </Button>
+
+
 
         <WrapPanel Grid.Row="1" 
                    VerticalAlignment="Center">
@@ -90,14 +101,21 @@
                             </Image>
 
                             <TextBlock Text="{Binding ProdName}" 
-                                       FontSize="14"
+                                       FontSize="18"
                                        Margin="10,25,0,0" HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding Description}" 
                                        FontSize="14"
-                                       Margin="10,25,0,0" HorizontalAlignment="Center"/>
+                                       Margin="10,10,0,0" HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding ProductType.TypeName}" 
                                        FontSize="14"
                                        Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Cost}" 
+                                       FontSize="14"
+                                       Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            
+                            
+                            
+                            
                             <WrapPanel>
                                 <Button x:Name="BtnBasketProduct" 
                                     Height="30"

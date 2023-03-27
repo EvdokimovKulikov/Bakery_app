@@ -116,5 +116,12 @@ namespace Bakery_app.Windows_app
         {
             MessageBox.Show("В разработке");
         }
+
+        private void BtnExitProduct_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();   
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

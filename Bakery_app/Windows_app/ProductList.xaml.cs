@@ -56,7 +56,7 @@ namespace Bakery_app.Windows_app
         {
             InitializeComponent();
             GetListProduct();
-            //LvCartProduct.ItemsSource = observableCollectionProduct;
+            
         }
 
         private void BtnEditProduct_Click(object sender, RoutedEventArgs e)
@@ -100,6 +100,11 @@ namespace Bakery_app.Windows_app
             GetListProduct();
         }
 
-       
+        private void BtnExitProduct_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

@@ -59,6 +59,13 @@ namespace Bakery_app.Windows_app
             TbDisc.Text = product.Description.ToString();
             CMBTypeProduct.SelectedItem = ContextDB.ProductType.Where(i => i.IdProdType == product.IdProdType).FirstOrDefault();
 
+            if (product.Description != null)
+            {
+
+
+
+            }
+
             if (product.Image != null)
             {
                 using (MemoryStream stream = new MemoryStream(product.Image))
