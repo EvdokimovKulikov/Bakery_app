@@ -117,6 +117,9 @@
     <Compile Include="Windows_app\BasketList.xaml.cs">
       <DependentUpon>BasketList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows_app\BuyWindow.xaml.cs">
+      <DependentUpon>BuyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows_app\EditProductList.xaml.cs">
       <DependentUpon>EditProductList.xaml</DependentUpon>
     </Compile>
@@ -130,6 +133,10 @@
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows_app\BasketList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows_app\BuyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
