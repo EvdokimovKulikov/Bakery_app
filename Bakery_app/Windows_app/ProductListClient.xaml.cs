@@ -101,6 +101,8 @@ namespace Bakery_app.Windows_app
         private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GetListProduct();
+
+
         }
 
         
