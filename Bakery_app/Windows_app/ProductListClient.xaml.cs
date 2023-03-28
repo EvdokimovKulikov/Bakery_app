@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static Bakery_app.ClassHelper.EFClass;
+using static Bakery_app.ClassHelper.CartProduct;
+using Bakery_app.ClassHelper;
 
 namespace Bakery_app.Windows_app
 {
@@ -114,7 +116,21 @@ namespace Bakery_app.Windows_app
 
         private void BtnBasketProduct_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var product = button.DataContext as Product;
+            CartProduct.products.Add(product);
+            MessageBox.Show($"Товар {product.ProdName} успешно добавлен в корзину");
+        }
+        private void ImgCart_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            BasketList basketList = new BasketList();
+            this.Hide();
+            basketList.ShowDialog();
+            this.Show();
         }
 
         private void BtnExitProduct_Click(object sender, RoutedEventArgs e)

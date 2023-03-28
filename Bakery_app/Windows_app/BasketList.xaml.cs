@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bakery_app.ClassHelper;
+using Bakery_app.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Bakery_app.ClassHelper.EFClass;
 
 namespace Bakery_app.Windows_app
 {
@@ -22,6 +25,7 @@ namespace Bakery_app.Windows_app
         public BasketList()
         {
             InitializeComponent();
+            LvCartProduct.ItemsSource = CartProduct.products;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -38,9 +42,24 @@ namespace Bakery_app.Windows_app
 
         private void BtnDeleteProduct_Click(object sender, RoutedEventArgs e)
         {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var product = button.DataContext as Product;
 
-            MessageBox.Show("В разработке");
 
+
+            if (product != null)
+            {
+                CartProduct.products.Remove(product);
+
+                LvCartProduct.ItemsSource = CartProduct.products;
+
+                MessageBox.Show(product.ProdName + " Delete");
+            }
+          LvCartProduct.ItemsSource = CartProduct.products;
 
         }
 
