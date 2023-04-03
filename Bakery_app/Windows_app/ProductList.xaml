@@ -52,6 +52,17 @@
                       Width="200" SelectionChanged="CmbSort_SelectionChanged" Margin="15,0,0,0"
                       />
 
+            <Button x:Name="BtnOptionAdmin" 
+                                    Height="45"
+                                    Width="45"
+                                    Margin="200,10,10,10"
+                                    Click="BtnOptionAdmin_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush ImageSource="/img/admin.png"/>
+                </Button.Background>
+            </Button>
+
+
         </WrapPanel>
 
         <ListView Grid.Row="2"

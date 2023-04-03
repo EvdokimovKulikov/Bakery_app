@@ -106,5 +106,13 @@ namespace Bakery_app.Windows_app
             mainWindow.Show();
             this.Close();
         }
+
+        private void BtnOptionAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            AdminPanelWindow adminPanel = new AdminPanelWindow();       
+            adminPanel.Show();
+            this.Close();
+
+        }
     }
 }
